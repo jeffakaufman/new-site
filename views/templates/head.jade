@@ -1,0 +1,45 @@
+script#Head(type="text/template")
+	h3.muted
+		| Kaufman International
+	.navbar-wrapper
+		.container
+			.navbar.navbar-inverse
+				.navbar-inner
+					button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.brand(href='#')
+						img(src='img/logo.png', width='45px')
+						|  Kaufman International
+					.nav-collapse.collapse
+						ul.nav
+							li.home-menu
+								a(href="/")
+									| Home
+							li.users-menu
+								a(href="#users")
+									| Users
+							li.register-menu
+								a(href='#register')
+									| Register
+							li.admin-menu
+								a(href='#admin')
+									| Admin
+							li.dropper-menu.dropdown
+								a.dropdown-toggle(href='#', data-toggle='dropdown')
+									| Dropdown
+									b.caret
+								ul.dropdown-menu
+									li
+										a(href='#') Action
+									li
+										a(href='#') Action 2
+									li
+										a(href='#') Action Jackson
+									li.divider
+									li.nav-header Nav header
+									li
+										a(href='#') Separated link
+									li
+										a(href='#') One more separated link

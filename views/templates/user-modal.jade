@@ -1,0 +1,50 @@
+script#UserModal(type="text/template")
+	.modal.hide.fade(id="myModal", tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+		.modal-header
+			button.close(type="button", data-dismiss="modal", aria-hidden="true")
+				&times;
+			h3
+				| <%=firstName%> <%=lastName%>
+
+		.modal-body
+			.row.user-profile
+				.span12
+					.span4
+						h3 Before
+						img.before(src!="<%=coverImage%>")
+					.span4.hidden
+						h3 After
+						img.after(src!="<%=coverImage%>")
+					.span4
+						h3 Age
+						.age
+							<%=age%>
+			.row.user-profile
+				.span2
+					h4 Votes
+				.span4
+					h4 Up : <%=downVotes%>
+				.span4
+					h4 Down : <%=upVotes%>
+
+			.row.user-profile
+				.span2
+					h5 Address 1
+					<%=address1%>
+					h5 Address 2
+					<%=address2%>
+				.span2
+					h5 City
+					<%=city%>
+					h5 State
+					<%=state%>
+				.span2
+					h5 ZipCode
+					<%=zip%>
+					h5 Phone
+					<%=telephone%>
+			.row.user-profile
+				.span12
+					h4 About
+					.content
+						| <%=about%>

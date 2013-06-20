@@ -1,0 +1,89 @@
+mixin select-options(option)
+	option(value="#{option}")
+		| #{option}
+
+script#Register(type="text/template")
+	#books.row
+		.row
+			.span12
+				h1 Register
+					p
+						small You will be glad you did
+		row-fluid
+			.span6
+				.area
+					h4 Personal Details
+					.details
+						.control-group
+							label.reg-label(for="firstName") First Name:
+							input.reg-input.reg-input(id="firstName", type="text", name="firstName")
+						.control-group
+							label.reg-label(for="lastName") Last Name:
+							input.reg-input(id="lastName", type="text", name="lastName")
+						.control-group
+							label.reg-label(for="address1") Address 1:
+							input.reg-input(id="address1", type="text", name="address1")
+						.control-group
+							label.reg-label(for="address1") Address 2:
+							input.reg-input(id="address2", type="text", name="address2")
+						.control-group
+							label.reg-label(for="city") City:
+							input.reg-input(id="city", type="text", name="city")
+						.control-group
+							label.reg-label(for="state") State:
+							select.reg-input(id="state", type="text", name="state")
+								- for i in ['AL','AK','AS','AZ','AR','CA','CO','CT','DE','DC','FM','FL','GA','GU','HI','ID','IL','IN','IA','KS','KY','LA','ME','MH','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','MP','OH','OK','OR','PW','PA','PR','RI','SC','SD','TN','TX','UT','VT','VI','VA','WA','WV','WI','WY']
+									mixin select-options(i)
+						.control-group
+							label.reg-label(for="zip") Zip:
+							input.reg-input(id="zip", type="text", name="zip")
+						.control-group
+							label.reg-label(for="telephone") Telephone:
+							input.reg-input(id="telephone", type="text", name="telephone")
+			.span6
+				.area
+					h4 Account Username &amp; Password
+					.details
+						.control-group
+							label.reg-label(for="email") Email Address:
+							input.reg-input(id="email", type="text", name="email")
+						.control-group
+							label.reg-label(for="password") Password:
+							input.reg-input(id="password", type="password", name="password")
+						.control-group
+							label.reg-label(for="passwordConfirm") Confirm Password:
+							input.reg-input(id="passwordConfirm", type="password")
+						.control-group
+							h4 Tell us about yourself
+							textarea.about(name="about",rows="4",cols="100")
+		hr
+		.row.span12
+			.span4
+				h4 Before Picture:
+				.details.selected-file
+				.details
+					.control-group
+						button#chooseImage.btn-primary
+							| Choose Image
+							i.icon-hdd.icon-white
+
+						img#picture(width="180", data-src="holder.js/100x150/text:Drag a picture here/gray")
+
+					input#coverImage(name="coverImage", type="file", name="coverImage", data-url="/upload")
+
+			.span5.offset1
+				h4 Age
+				.details
+					label.reg-label(for="age")
+						| Age:
+					input.reg-input(id="age", type="text", name="age")
+					label.reg-label(for="birthday") Birthday:
+					select.reg-input(id="birthday", type="text", name="birthDay")
+						- for i in ["Day",1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+							mixin select-options(i)
+					select.reg-input(id="birthMonth", type="text", name="birthMonth")
+						- for i in ["Month","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug",'Sep',"Oct","Nov","Dec"]
+							mixin select-options(i)
+					a.register.btn.btn-success.btn-large
+						| Register
+

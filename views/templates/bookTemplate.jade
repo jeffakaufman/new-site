@@ -1,0 +1,21 @@
+script#bookTemplate(type='text/template')
+	img(src!="<%= coverImage %>",width="105px")
+	ul
+		li
+			<%= firstName %> <%= lastName %>
+		li
+			<%= address1 %>
+		li
+			<%= address2 %>
+		li
+			<%= city %>, <%= state %> <%= zip %>
+		li
+			Status: <%= status %>
+	.btn-toolbar
+	.btn-group
+		button.btn.approve.btn.btn-success
+			| Approve
+		button.btn.reject.btn.btn-danger
+			| Reject
+		button.btn.reset
+			| Reset

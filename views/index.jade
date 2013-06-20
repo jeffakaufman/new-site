@@ -1,0 +1,40 @@
+doctype 5
+html
+	head
+		title New Site
+		!= css('main')
+		link(href='http://fonts.googleapis.com/css?family=Michroma', rel='stylesheet', type='text/css')
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
+		include templates/templates
+	body
+
+	!=js('lib/jquery.min')
+	!=js('lib/jquery-ui-1.10.3.custom.min')
+	!=js('lib/jquery.iframe-transport')
+	!=js('lib/jquery.fileupload')
+	!=js('lib/jquery.fileupload-process')
+	!=js('lib/jquery.fileupload-ui')
+	!=js('lib/underscore-min')
+	!=js('lib/backbone-min')
+	!=js('lib/backbone.marionette')
+	!=js('lib/holder')
+	!=js('lib/moment.min')
+	!=js('lib/jquery.formparams')
+	!=js('lib/bootstrap.min.js')
+	!=js('models/user')
+	!=js('collections/users')
+	!=js('views/home')
+	!=js('views/sorted-view')
+	!=js('views/head')
+	!=js('views/book')
+	!=js('views/library')
+	!=js('views/register')
+	!=js('views/thanks')
+	!=js('views/reviewed-user')
+	!=js('views/admin')
+	!=js('views/user')
+	!=js('views/users')
+	!=js('views/app-layout')
+	!=js('app-controller')
+	!=js('app-router')
+	!=js('app')

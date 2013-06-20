@@ -1,0 +1,22 @@
+script#User(type="text/template")
+	.row.user-public-profile
+			.row
+				.span2
+					h4 Before
+					img.before.thumbnail(src!="<%=coverImage%>")
+				.span2
+					h4 After
+					img.after.thumbnail(src!="<%=coverImage%>")
+				.span2.margin40
+					.user-info.user-name
+						| <%=firstName%> <%=lastName%>
+					.user-field
+						| Age : <%=age%>
+					.user-field
+						| City: <%=city%>
+					.action
+						button.btn.btn-success.vote-yes
+							| Vote
+
+
+

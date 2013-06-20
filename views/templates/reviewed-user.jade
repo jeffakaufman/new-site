@@ -1,0 +1,28 @@
+script#ReviewedUser(type="text/template")
+	td
+		| <%= moment(createdOn).format("MM/DD/YYYY") %>
+	td
+		| <%=firstName%>
+	td
+		| <%=lastName%>
+	td
+		| <%=age%>
+	td
+		| <%=upVotes%>
+	td
+		img.reviewed-user-img(src!="<%=coverImage%>")
+	td
+		<% if(status == "approved") { var css = "badge-success" } %>
+		<% if(status == "rejected") { var css = "badge-important" } %>
+		<% if(status == "unreviewed") { var css = "badge-warning" } %>
+		span.badge(class!="<%=css%>")
+			| <%=status%>
+	td.user-actions
+		.btn-toolbar
+			button.btn.btn-info.view.btn-small
+				| View
+			button.btn.btn-success.approve.btn-small(data-status!="<%=status%>")
+				| Approve
+			button.btn.btn-danger.reject.btn-small(data-status!="<%=status%>")
+				| Reject
+		.user-modal
