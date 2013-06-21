@@ -10,11 +10,12 @@ var AppController = Marionette.Controller.extend({
 
 	home: function() {
 		var rgView = new HomeView();
-		this.appLayout.main.show(rgView);
+		this.appLayout.homepage.show(rgView);
 		this.headerView.selectMenuItem('home-menu');
 	},
 
 	users: function() {
+		this.appLayout.homepage.close();
 		var rgView = new UsersView();
 		this.appLayout.main.show(rgView);
 		this.headerView.selectMenuItem('users-menu');
@@ -26,12 +27,14 @@ var AppController = Marionette.Controller.extend({
 	},
 
 	admin: function() {
+		this.appLayout.homepage.close();
 		var rgView = new AdminView();
 		this.appLayout.main.show(rgView);
 		this.headerView.selectMenuItem('admin-menu');
 	},
 
 	register: function() {
+		this.appLayout.homepage.close();
 		var rgView = new RegisterView();
 		this.appLayout.main.show(rgView);
 		this.headerView.selectMenuItem('register-menu');

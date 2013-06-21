@@ -6,6 +6,7 @@ var AppLayout = Backbone.Marionette.Layout.extend({
 	regions: {
 		header: ".head",
 		main: ".main",
+		homepage: ".homepage",
 		footer: ".footer"
 	}
 });
