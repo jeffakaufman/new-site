@@ -11,5 +11,5 @@ Images are uploaded to S3 bucket "rejuvdev" with public read permissions
 * User fills the form
 * User clicks the add button
 * The file will be uploaded to S3 first, then server will return the S3 file URL
-* The Books collection gets called on upload success to save a new book with the "coverImage" field populated with the
+* The Books collection gets called on upload success to save a new book with the "projectImage" field populated with the
 url of the file uploaded to S3

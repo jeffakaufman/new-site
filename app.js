@@ -35,6 +35,9 @@ app.configure(function() {
 //Connect to database
 mongoose.connect(cfg.db.url + cfg.db.database);
 
+// Configure Projects Collection API Routes
+require('./routes/projects').use(app, mongoose);
+
 // Configure Books Collection API Routes
 require('./routes/books').use(app, mongoose);
 

@@ -49,7 +49,7 @@ app.LibraryView = Backbone.View.extend({
         return false;
     },
 
-    saveNewBook: function(bookCoverImageUrl) {
+    saveNewBook: function(bookprojectImageUrl) {
         // if the user selected a file to upload, then upload it first
         var formData = {};
         $('#addBook div').children('input').each(function(i, el) {
@@ -70,8 +70,8 @@ app.LibraryView = Backbone.View.extend({
             // Clear input field value
             $(el).val('');
         });
-        if (bookCoverImageUrl && bookCoverImageUrl.replace(/\s+/g, '').length > 0) {
-            formData["coverImage"] = bookCoverImageUrl;
+        if (bookprojectImageUrl && bookprojectImageUrl.replace(/\s+/g, '').length > 0) {
+            formData["projectImage"] = bookprojectImageUrl;
         }
         this.collection.create(formData);
         // Clear current files property

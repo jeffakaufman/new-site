@@ -14,7 +14,7 @@ exports.use = function(app, mongoose) {
         state: String,
         zip: String,
         telephone: String,
-        coverImage: String,
+        projectImage: String,
         email: String,
         password: String,
         age: Number,
@@ -43,9 +43,9 @@ exports.use = function(app, mongoose) {
     //Models
     var BookModel = mongoose.model('Book', Book);
 
-    app.get('/api', function(request, response) {
+   /* app.get('/api', function(request, response) {
         response.send('Library API is running');
-    });
+    });*/
 
     //Get a list of all books
     app.get('/api/books', function(request, response) {
@@ -75,7 +75,7 @@ exports.use = function(app, mongoose) {
             age: request.body.age,
             birthMonth: request.body.birthMonth,
             birthDay: request.body.birthDay,
-            coverImage: request.body.coverImage,
+            projectImage: request.body.projectImage,
             about: request.body.about
         });
         //console.log(book);

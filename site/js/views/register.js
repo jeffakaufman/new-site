@@ -12,7 +12,7 @@ var RegisterView = Backbone.Marionette.ItemView.extend({
 
 	ui: {
 		form: "#books",
-		beforeImg: '#coverImage',
+		beforeImg: '#projectImage',
 		picture: '#picture',
 		selectedFile: '.selected-file'
 	},
@@ -79,7 +79,7 @@ var RegisterView = Backbone.Marionette.ItemView.extend({
 	saveNewUser: function(imgUrl) {
 		formData = this.ui.form.formParams();
 		if (imgUrl) {
-			formData["coverImage"] = imgUrl;
+			formData["projectImage"] = imgUrl;
 		}
 		this.collection.create(formData, {
 			success: function() {
@@ -114,7 +114,7 @@ var RegisterView = Backbone.Marionette.ItemView.extend({
 	},
 
 	showUpload: function() {
-		this.$('#coverImage').trigger('click');
+		this.$('#projectImage').trigger('click');
 		return false;
 	}
 });

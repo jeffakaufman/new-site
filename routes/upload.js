@@ -4,7 +4,7 @@ var uuid = require('node-uuid');
 exports.use = function(app, s3Client) {
 	app.post("/upload", function(request, response) {
 		//console.log(request.files);
-		var uploadedFiled = request.files.coverImage;
+		var uploadedFiled = request.files.projectImage;
 		// Set S3 headers from the uploaded file info
 		var headers = {
 			'Content-Length': uploadedFiled.size,

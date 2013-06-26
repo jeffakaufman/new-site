@@ -31,8 +31,8 @@ var app = app || {};
 
 $(function() {
 	$('#releaseDate').datepicker();
-	$('#coverImage').fileupload({
-		fileInput: '#coverImage',
+	$('#projectImage').fileupload({
+		fileInput: '#projectImage',
 		dropZone: "#picture",
 		dataType: 'json',
 		url: '/upload',
@@ -40,7 +40,7 @@ $(function() {
 		drop: function(e, data) {
 			console.log(data);
 			if (data && data.files && data.files > 0) {
-				$('#coverImage').text(data.files[0]);
+				$('#projectImage').text(data.files[0]);
 			}
 		},
 		change: function(e, data) {

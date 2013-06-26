@@ -20,6 +20,13 @@ var AppController = Marionette.Controller.extend({
 		this.appLayout.main.show(rgView);
 		this.headerView.selectMenuItem('users-menu');
 	},
+	
+	projects: function() {
+		this.appLayout.homepage.close();
+		var rgView = new ProjectsView();
+//		this.appLayout.main.show(rgView);
+		this.headerView.selectMenuItem('portfolio-menu');
+	},
 
 	thanks: function() {
 		var rgView = new ThanksView({});

@@ -1,0 +1,17 @@
+script#Project(type="text/template")
+	.container
+		.row.project-public-profile
+				.row
+					.span2	
+						h4 Image
+						img.before.thumbnail(src!="<%=projectImage%>")
+					.span2.margin40
+						.user-info.user-name
+							| <%=name%>
+						.user-field
+							| Client: <%=client%>
+						.user-field
+							| Description: <%=description%>
+
+
+

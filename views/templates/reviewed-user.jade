@@ -10,7 +10,7 @@ script#ReviewedUser(type="text/template")
 	td
 		| <%=upVotes%>
 	td
-		img.reviewed-user-img(src!="<%=coverImage%>")
+		img.reviewed-user-img(src!="<%=projectImage%>")
 	td
 		<% if(status == "approved") { var css = "badge-success" } %>
 		<% if(status == "rejected") { var css = "badge-important" } %>
